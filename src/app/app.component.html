@@ -1,0 +1,40 @@
+<h2>Grid 1</h2>
+<button (click)="addRowData()">Append row</button>
+<button (click)="removeRowData()">Delete selected row</button>
+<button (click)="updateOddRowData()">Update odd rows</button>
+<button (click)="updateEvenRowData()">Update even rows</button>
+<button (click)="resetRowData()">Reset rows</button>
+
+<ag-grid-angular
+  #agGrid
+  style="width: 600px; height: 500px;"
+  id="myGrid"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [immutableData]="true"
+  [getRowNodeId]="getRowNodeId"
+  [rowSelection]="'single'"
+  [rowData]="rowData"
+  (gridReady)="onGridReady($event)"
+></ag-grid-angular>
+<!-- 
+<h2>Grid 2</h2>
+<button (click)="addRowData2()">Append row 2</button>
+<button (click)="removeRowData2()">Delete selected row2</button>
+<button (click)="updateOddRowData2()">Update odd rows2</button>
+<button (click)="updateEvenRowData2()">Update even rows2</button>
+<button (click)="resetRowData2()">Reset rows2</button>
+<ag-grid-angular
+  #agGrid2
+  style="width: 600px; height: 500px;"
+  id="myGrid2"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs2"
+  [defaultColDef]="defaultColDef2"
+  [immutableData]="true"
+  [getRowNodeId]="getRowNodeId2"
+  [rowSelection]="'single'"
+  [rowData]="rowData2"
+  (gridReady)="onGridReady2($event)"
+></ag-grid-angular> -->
